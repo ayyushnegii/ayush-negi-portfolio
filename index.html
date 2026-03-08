@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Rivera | Full Stack Developer & Creative Coder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-text">INITIALIZING</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="loader-percent" id="loaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" data-magnetic>
+                <span class="logo-text">AR</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" data-magnetic>About</a></li>
+                <li><a href="#skills" data-magnetic>Skills</a></li>
+                <li><a href="#projects" data-magnetic>Projects</a></li>
+                <li><a href="#experience" data-magnetic>Experience</a></li>
+                <li><a href="#contact" data-magnetic>Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Alex</span>
+                    <span class="title-line">Rivera</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <a href="#projects" class="hero-cta" data-magnetic>
+                    <span class="cta-text">Explore My Work</span>
+                    <span class="cta-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">
+                        <span class="title-char">A</span>
+                        <span class="title-char">b</span>
+                        <span class="title-char">o</span>
+                        <span class="title-char">u</span>
+                        <span class="title-char">t</span>
+                    </h2>
+                    <div class="about-bio">
+                        <p>I'm a <span class="highlight">Full Stack Developer</span> and <span class="highlight">Creative Coder</span> based in the digital realm. With over 5 years of experience, I craft immersive web experiences that push the boundaries of what's possible in the browser.</p>
+                        <p>My journey began with a fascination for how code can transform into art. Today, I specialize in building <span class="highlight">3D web experiences</span>, <span class="highlight">interactive interfaces</span>, and <span class="highlight">scalable applications</span> that leave lasting impressions.</p>
+                        <p>When I'm not coding, you'll find me exploring the intersection of <span class="highlight">technology</span> and <span class="highlight">design</span>, creating digital experiences that inspire and captivate.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <canvas id="aboutCanvas" class="about-canvas"></canvas>
+                    <div class="about-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <h2 class="section-title section-title-center">
+                <span class="title-char">S</span>
+                <span class="title-char">k</span>
+                <span class="title-char">i</span>
+                <span class="title-char">l</span>
+                <span class="title-char">l</span>
+                <span class="title-char">s</span>
+            </h2>
+            <div class="skills-orbit">
+                <canvas id="skillsCanvas" class="skills-canvas"></canvas>
+                <div class="skills-center">
+                    <span class="skills-label">TECH</span>
+                    <span class="skills-stack">STACK</span>
+                </div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9-.82-.08-1.63-.2-2.4-.36-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.3.47-.62.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.3-.47.62-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68 0 1.69-1.83 2.93-4.37 3.68.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68 0-1.69 1.83-2.93 4.37-3.68-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26 0-.73-1.18-1.63-3.28-2.26-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26 0 .73 1.18 1.63 3.28 2.26.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m-2.89 3.26c.79.16 1.58.28 2.4.36.48-.67.99-1.31 1.51-1.9-1.59-1.5-2.97-2.08-3.6-1.7-.64.35-.83 1.82-.31 3.96z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>React</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="95, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0H1.125zM15.75 18.375h-4.5v-3.375h-2.25v3.375H6.75v-6.75h2.25v3.375h2.25v-3.375h2.25v3.375h2.25v-3.375h2.25v6.75h-2.25z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>TypeScript</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.998 0C5.366 0 0 5.367 0 12a6.003 6.003 0 0 0 4.499 5.73v-4.053L7.41 15l-.001-4.5H4.5v-3h3.5l.001 3.199 3.09-.001L11.1 6h3.899v3h-3.5l.001-3H15l-3.002 6zM16.5 6v3.5h3.5l-3.5 6v-6z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Three.js</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="88, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Node.js</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="92, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Python</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 5h2v6h-2V7zm-1 8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>PostgreSQL</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="82, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>82%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>GraphQL</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 2v12h16V6H4m2 2h2v8H6V8m4 0h8v8h-2V8h-4V8m-4 2h2v4H6v-4z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h3>CSS/SASS</h3>
+                        <div class="skill-progress">
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path class="progress-fill" stroke-dasharray="94, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                </svg>
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-char">P</span>
+                <span class="title-char">r</span>
+                <span class="title-char">o</span>
+                <span class="title-char">j</span>
+                <span class="title-char">e</span>
+                <span class="title-char">c</span>
+                <span class="title-char">t</span>
+                <span class="title-char">s</span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Cosmic Dreams</h3>
+                        <p>An immersive 3D space exploration platform featuring procedurally generated galaxies, real-time star rendering, and interactive spacecraft controls.</p>
+                        <div class="project-tags">
+                            <span>Three.js</span>
+                            <span>WebGL</span>
+                            <span>GSAP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Code</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Neural Canvas</h3>
+                        <p>A creative coding suite for AI-assisted artwork generation. Users can create, customize, and export unique digital artworks powered by machine learning.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>TensorFlow</span>
+                            <span>Canvas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Code</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Crypto Vault</h3>
+                        <p>A secure cryptocurrency portfolio tracker with real-time price updates, interactive charts, and advanced analytics for DeFi investments.</p>
+                        <div class="project-tags">
+                            <span>Next.js</span>
+                            <span>Web3</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Code</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.41 15.95L12 13.36l2.59 2.59L16 14.54l-2.59-2.59L16 9.36 14.59 7.95 12 10.54 9.41 7.95 8 9.36l2.59 2.59L8 14.54l1.41 1.41z"/></svg>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sound Forge</h3>
+                        <p>A web-based digital audio workstation with real-time synthesis, effects processing, and MIDI controller support for music production.</p>
+                        <div class="project-tags">
+                            <span>Web Audio</span>
+                            <span>Canvas</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <span>Code</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="title-char">E</span>
+                <span class="title-char">x</span>
+                <span class="title-char">p</span>
+                <span class="title-char">e</span>
+                <span class="title-char">r</span>
+                <span class="title-char">i</span>
+                <span class="title-char">e</span>
+                <span class="title-char">n</span>
+                <span class="title-char">c</span>
+                <span class="title-char">e</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h3>Senior Full Stack Developer</h3>
+                        <h4>Quantum Labs</h4>
+                        <p>Leading development of next-generation web applications. Architecting scalable solutions and mentoring junior developers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3>Full Stack Developer</h3>
+                        <h4>Neon Digital</h4>
+                        <p>Built interactive 3D web experiences for Fortune 500 clients. Implemented real-time collaboration features.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 - 2021</span>
+                        <h3>Frontend Developer</h3>
+                        <h4>Pixel Perfect Studios</h4>
+                        <p>Developed responsive, accessible web interfaces. Specialized in animations and micro-interactions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2018 - 2019</span>
+                        <h3>Junior Developer</h3>
+                        <h4>StartUp Inc.</h4>
+                        <p>Started my professional journey building MVPs and learning modern web technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title section-title-center">
+                <span class="title-char">C</span>
+                <span class="title-char">o</span>
+                <span class="title-char">n</span>
+                <span class="title-char">t</span>
+                <span class="title-char">a</span>
+                <span class="title-char">c</span>
+                <span class="title-char">t</span>
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Create Something Amazing</h3>
+                    <p>Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.</p>
+                    <div class="contact-details">
+                        <a href="mailto:alex@portfolio.dev" class="contact-item" data-magnetic>
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </span>
+                            <span>alex@portfolio.dev</span>
+                        </a>
+                        <a href="#" class="contact-item" data-magnetic>
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            <span>San Francisco, CA</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-magnetic>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" data-magnetic>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" data-magnetic>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="submit-btn" data-magnetic>
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </span>
+                        <span class="btn-ripple"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Alex Rivera. Crafted with passion and code.</p>
+            <div class="footer-links">
+                <a href="#hero">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/site-data.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Dynamic Content Loader - Populates site from localStorage or defaults
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = SiteData.getAll();
+            
+            // Update page title
+            if (data.settings?.siteTitle) {
+                document.title = data.settings.siteTitle;
+            }
+
+            // Update nav logo / favicon text
+            const logoText = document.querySelector('.logo-text');
+            if (logoText && data.settings?.favicon) {
+                logoText.textContent = data.settings.favicon;
+            }
+            
+            // Update profile data
+            if (data.profile) {
+                // Hero section - name
+                const titleLines = document.querySelectorAll('.title-line');
+                if (titleLines.length >= 2) {
+                    const nameParts = data.profile.name.split(' ');
+                    titleLines[0].textContent = nameParts[0] || '';
+                    titleLines[1].textContent = nameParts.slice(1).join(' ') || '';
+                }
+
+                // FIX: Sync about bio paragraphs from SiteData (was never updating)
+                const bioParagraphs = document.querySelectorAll('.about-bio p');
+                if (bioParagraphs[0] && data.profile.bio) bioParagraphs[0].innerHTML = data.profile.bio;
+                if (bioParagraphs[1] && data.profile.bio2) bioParagraphs[1].innerHTML = data.profile.bio2;
+                if (bioParagraphs[2] && data.profile.bio3) bioParagraphs[2].innerHTML = data.profile.bio3;
+            }
+
+            // FIX: Sync contact email and social links from SiteData (was never updating)
+            if (data.contact) {
+                const emailLink = document.querySelector('.contact-item[href^="mailto"]');
+                if (emailLink && data.contact.email) {
+                    emailLink.href = 'mailto:' + data.contact.email;
+                    const emailSpan = emailLink.querySelector('span:last-child');
+                    if (emailSpan) emailSpan.textContent = data.contact.email;
+                }
+                const socialLinks = document.querySelectorAll('.social-link');
+                if (socialLinks[0] && data.contact.github) socialLinks[0].href = data.contact.github;
+                if (socialLinks[1] && data.contact.linkedin) socialLinks[1].href = data.contact.linkedin;
+                if (socialLinks[2] && data.contact.twitter) socialLinks[2].href = data.contact.twitter;
+            }
+
+            // FIX: Sync about stats counters from SiteData
+            if (data.stats) {
+                document.querySelectorAll('.stat-number').forEach(el => {
+                    const label = el.nextElementSibling?.textContent?.trim().toLowerCase();
+                    if (label === 'projects' && data.stats.projects) el.dataset.count = data.stats.projects;
+                    if (label === 'years exp' && data.stats.years) el.dataset.count = data.stats.years;
+                    if (label === 'clients' && data.stats.clients) el.dataset.count = data.stats.clients;
+                });
+            }
+            
+            // FIX: Section visibility - use correct style.display (not setProperty) and check === false
+            // so sections don't get hidden on first load when settings is undefined
+            const sections = data.settings?.sections || {};
+            if (sections.about === false) { const el = document.getElementById('about'); if (el) el.style.display = 'none'; }
+            if (sections.skills === false) { const el = document.getElementById('skills'); if (el) el.style.display = 'none'; }
+            if (sections.projects === false) { const el = document.getElementById('projects'); if (el) el.style.display = 'none'; }
+            if (sections.experience === false) { const el = document.getElementById('experience'); if (el) el.style.display = 'none'; }
+            if (sections.contact === false) { const el = document.getElementById('contact'); if (el) el.style.display = 'none'; }
+        });
+        
+        // Hidden Admin Link - Click © 3 times to access admin
+        let copyrightClickCount = 0;
+        document.addEventListener('DOMContentLoaded', () => {
+            const copyright = document.querySelector('.footer p');
+            if (copyright) {
+                copyright.style.cursor = 'pointer';
+                copyright.addEventListener('click', () => {
+                    copyrightClickCount++;
+                    if (copyrightClickCount >= 3) {
+                        window.location.href = 'admin.html';
+                        copyrightClickCount = 0;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
