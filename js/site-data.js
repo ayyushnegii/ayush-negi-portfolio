@@ -5,63 +5,33 @@ const SiteData = {
     // Default data fallback
     defaults: {
         profile: {
-            name: "Alex Rivera",
-            title: "Full Stack Developer & Creative Coder",
-            bio: "I'm a Full Stack Developer and Creative Coder based in the digital realm. With over 5 years of experience, I craft immersive web experiences that push the boundaries of what's possible in the browser.",
-            bio2: "My journey began with a fascination for how code can transform into art. Today, I specialize in building 3D web experiences, interactive interfaces, and scalable applications that leave lasting impressions.",
-            bio3: "When I'm not coding, you'll find me exploring the intersection of technology and design, creating digital experiences that inspire and captivate.",
-            location: "San Francisco, CA",
-            email: "alex@portfolio.dev",
+            name: "Ayush Negi",
+            title: "UI/UX Designer & Creative Mind",
+            bio: "I'm Ayush, a curious mind who enjoys exploring ideas and turning them into digital creations. Through design, experimentation, and a little vibe coding, I build things that reflect both creativity and thoughtful problem-solving.",
+            bio2: "I work with Figma for UI/UX design, Lightroom and Photoshop for photo editing, and illustration — blending visual craft with just enough code to bring ideas to life on the web.",
+            bio3: "I study philosophy and psychology, which shapes how I think about design — always asking why something feels right, not just whether it looks good.",
+            location: "Uttarakhand, India",
+            email: "ayyushnegi@gmail.com",
             avatar: null
         },
         skills: [
-            { id: 1, name: "React", percentage: 95, icon: "react" },
-            { id: 2, name: "TypeScript", percentage: 90, icon: "typescript" },
-            { id: 3, name: "Three.js", percentage: 88, icon: "threejs" },
-            { id: 4, name: "Node.js", percentage: 92, icon: "node" },
-            { id: 5, name: "Python", percentage: 85, icon: "python" },
-            { id: 6, name: "PostgreSQL", percentage: 82, icon: "postgres" },
-            { id: 7, name: "GraphQL", percentage: 80, icon: "graphql" },
-            { id: 8, name: "CSS/SASS", percentage: 94, icon: "css" }
+            { id: 1, name: "Figma", percentage: 75, icon: "figma" },
+            { id: 2, name: "Adobe Photoshop", percentage: 70, icon: "photoshop" },
+            { id: 3, name: "Lightroom", percentage: 72, icon: "lightroom" },
+            { id: 4, name: "Illustration", percentage: 65, icon: "illustration" },
+            { id: 5, name: "HTML / CSS", percentage: 60, icon: "css" },
+            { id: 6, name: "JavaScript", percentage: 45, icon: "javascript" },
+            { id: 7, name: "Philosophy & Psychology", percentage: 80, icon: "philosophy" },
+            { id: 8, name: "Vibe Coding", percentage: 70, icon: "code" }
         ],
         projects: [
             {
                 id: 1,
-                title: "Cosmic Dreams",
-                description: "An immersive 3D space exploration platform featuring procedurally generated galaxies, real-time star rendering, and interactive spacecraft controls.",
-                tags: ["Three.js", "WebGL", "GSAP"],
+                title: "This Portfolio",
+                description: "A personal portfolio site built through experimentation and vibe coding — featuring 3D animations, an admin CMS, and a design that reflects my creative approach.",
+                tags: ["HTML", "CSS", "JavaScript", "Three.js"],
                 liveUrl: "#",
-                githubUrl: "#",
-                image: null,
-                visible: true
-            },
-            {
-                id: 2,
-                title: "Neural Canvas",
-                description: "A creative coding suite for AI-assisted artwork generation. Users can create, customize, and export unique digital artworks powered by machine learning.",
-                tags: ["React", "TensorFlow", "Canvas"],
-                liveUrl: "#",
-                githubUrl: "#",
-                image: null,
-                visible: true
-            },
-            {
-                id: 3,
-                title: "Crypto Vault",
-                description: "A secure cryptocurrency portfolio tracker with real-time price updates, interactive charts, and advanced analytics for DeFi investments.",
-                tags: ["Next.js", "Web3", "Chart.js"],
-                liveUrl: "#",
-                githubUrl: "#",
-                image: null,
-                visible: true
-            },
-            {
-                id: 4,
-                title: "Sound Forge",
-                description: "A web-based digital audio workstation with real-time synthesis, effects processing, and MIDI controller support for music production.",
-                tags: ["Web Audio", "Canvas", "React"],
-                liveUrl: "#",
-                githubUrl: "#",
+                githubUrl: "https://github.com/ayyushnegii/ayush-negi-portfolio",
                 image: null,
                 visible: true
             }
@@ -69,42 +39,28 @@ const SiteData = {
         experience: [
             {
                 id: 1,
-                date: "2023 - Present",
-                title: "Senior Full Stack Developer",
-                company: "Quantum Labs",
-                description: "Leading development of next-generation web applications. Architecting scalable solutions and mentoring junior developers."
+                date: "2024 - Present",
+                title: "Self-Taught Designer & Creator",
+                company: "Independent",
+                description: "Exploring UI/UX design, photo editing, and creative coding on my own terms. Building small projects, experimenting with ideas, and developing a personal design language."
             },
             {
                 id: 2,
-                date: "2021 - 2023",
-                title: "Full Stack Developer",
-                company: "Neon Digital",
-                description: "Built interactive 3D web experiences for Fortune 500 clients. Implemented real-time collaboration features."
-            },
-            {
-                id: 3,
-                date: "2019 - 2021",
-                title: "Frontend Developer",
-                company: "Pixel Perfect Studios",
-                description: "Developed responsive, accessible web interfaces. Specialized in animations and micro-interactions."
-            },
-            {
-                id: 4,
-                date: "2018 - 2019",
-                title: "Junior Developer",
-                company: "StartUp Inc.",
-                description: "Started my professional journey building MVPs and learning modern web technologies."
+                date: "2024 - Present",
+                title: "Philosophy & Psychology Student",
+                company: "University",
+                description: "Studying the way humans think, feel, and perceive the world — bringing those insights into every design decision I make."
             }
         ],
         contact: {
-            email: "alex@portfolio.dev",
-            github: "https://github.com",
-            linkedin: "https://linkedin.com",
-            twitter: "https://twitter.com"
+            email: "ayyushnegi@gmail.com",
+            github: "https://github.com/ayyushnegii",
+            linkedin: "https://linkedin.com/in/ayyushnegii",
+            twitter: "https://twitter.com/ayyushnegii"
         },
         settings: {
-            siteTitle: "Alex Rivera | Full Stack Developer & Creative Coder",
-            favicon: "AR",
+            siteTitle: "Ayush Negi | UI/UX Designer & Creative Mind",
+            favicon: "AN",
             sections: {
                 about: true,
                 skills: true,
@@ -114,9 +70,9 @@ const SiteData = {
             }
         },
         stats: {
-            projects: 50,
-            years: 5,
-            clients: 30
+            projects: 3,
+            years: 1,
+            clients: 0
         }
     },
 

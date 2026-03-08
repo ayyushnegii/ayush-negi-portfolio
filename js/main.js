@@ -90,7 +90,7 @@ class PortfolioApp {
 
     // Typewriter Effect
     setupTypewriter() {
-        const text = "Full Stack Developer & Creative Coder";
+        const text = "Ideas. Designed and built.";
         const typewriter = document.getElementById('typewriter');
         
         if (!typewriter) return;
